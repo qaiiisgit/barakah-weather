@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoadingSpinner = ({ message = 'Loading...', fullScreen = false }) => {
+const LoadingSpinner = ({ message = 'Loading, Please wait...', fullScreen = false }) => {
   if (fullScreen) {
     return (
       <div className="fixed inset-0 flex flex-col items-center justify-center bg-slate-900 z-50">
