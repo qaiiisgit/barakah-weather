@@ -6,7 +6,7 @@ const ErrorCard = ({ message, onRetry, type = 'error' }) => {
         error: {
             icon: '⚠️',
             title: 'Something went wrong',
-            bg: 'bgred-500/10',
+            bg: 'bg-red-500/10 ',
             border: 'border-red-500/20',
             btn: 'bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/30',
         },
