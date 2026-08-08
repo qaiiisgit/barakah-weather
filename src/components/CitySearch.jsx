@@ -93,7 +93,7 @@ const CitySearch = ({ onSelectCity, onClose }) => {
 
         {/* Results */}
         {searchError && (
-          <p className="text-red-400 ">{searchError}</p>                         //Please check the styling here
+          <p className="text-red-400 text-sm text-center py-4">{searchError}</p>                         //Please check the styling here
         )}
 
         {results.length > 0 && (
