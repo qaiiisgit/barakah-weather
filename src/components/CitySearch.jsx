@@ -45,7 +45,7 @@ const CitySearch = ({ onSelectCity, onClose }) => {
 
   return (
     // Please check the styling here
-    <div className="fixed "
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end justify-center"
       onClick={onClose}>
       <div className="w-full max-w-md bg-slate-900 rounded-t-3xl p-6 pb-10 border border-white/10
         animate-slide-up"
@@ -93,7 +93,7 @@ const CitySearch = ({ onSelectCity, onClose }) => {
 
         {/* Results */}
         {searchError && (
-          <p className="text-red-400 text-sm text-center py-4">{searchError}</p>                         //Please check the styling here
+          <p className="text-red-400 text-sm text-center py-4">{searchError}</p>                         
         )}
 
         {results.length > 0 && (
