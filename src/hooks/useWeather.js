@@ -36,5 +36,5 @@ export const useWeather = (location) => {
     return () => clearInterval(interval);
   }, [location, loadWeather]);
 
-  return { weather, loading, refresh: loadWeather, lastFetched };
+  return { weather, loading,  error, refresh: loadWeather, lastFetched };
 };
