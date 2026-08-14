@@ -50,19 +50,19 @@ export const usePrayerTimes = (location, method = 2) => {
   }, [prayerData]);
 
   // Refresh at midnight
-//   useEffect(() => {
-//     const now = new Date();
-//     const midnight = new Date();
-//     midnight.setHours(24, 0, 0, 0);
-//     const msUntilMidnight = midnight - now;
+  useEffect(() => {
+    const now = new Date();
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0);
+    const msUntilMidnight = midnight - now;
 
-//     const timeout = setTimeout(() => {
-//       loadPrayerTimes();
-//     }, msUntilMidnight);
+    const timeout = setTimeout(() => {
+      loadPrayerTimes();
+    }, msUntilMidnight);
 
-//     return () => clearTimeout(timeout);
-//   }, [loadPrayerTimes]);
+    return () => clearTimeout(timeout);
+  }, [loadPrayerTimes]);
 
-//   return { prayerData, nextPrayer, countdown, loading, error, refresh: loadPrayerTimes };
-  return { prayerData, nextPrayer, countdown, loading, error };
+  return { prayerData, nextPrayer, countdown, refresh: loadPrayerTimes };
+  
 };
