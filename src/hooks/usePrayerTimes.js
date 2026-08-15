@@ -63,6 +63,6 @@ export const usePrayerTimes = (location, method = 2) => {
     return () => clearTimeout(timeout);
   }, [loadPrayerTimes]);
 
-  return { prayerData, nextPrayer, countdown, refresh: loadPrayerTimes };
+  return { prayerData, nextPrayer, countdown, loading, refresh: loadPrayerTimes };
   
 };
