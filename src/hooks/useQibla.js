@@ -35,25 +35,25 @@ export const useQibla = (location) => {
   }, [loadQiblaDirection]);
 
   // Web Compass API
-//   const requestCompassPermission = useCallback(async () => {
-//     if (typeof DeviceOrientationEvent !== 'undefined' &&
-//       typeof DeviceOrientationEvent.requestPermission === 'function') {
-//       try {
-//         const permission = await DeviceOrientationEvent.requestPermission();
-//         setCompassPermission(permission);
-//         if (permission === 'granted') {
-//           setCompassSupported(true);
-//         }
-//       } catch {
-//         setCompassPermission('denied');
-//       }
-//     } else if (window.DeviceOrientationEvent) {
-//       setCompassSupported(true);
-//       setCompassPermission('granted');
-//     } else {
-//       setCompassPermission('not-supported');
-//     }
-//   }, []);
+  const requestCompassPermission = useCallback(async () => {
+    if (typeof DeviceOrientationEvent !== 'undefined' &&
+      typeof DeviceOrientationEvent.requestPermission === 'function') {
+      try {
+        const permission = await DeviceOrientationEvent.requestPermission();
+        setCompassPermission(permission);
+        if (permission === 'granted') {
+          setCompassSupported(true);
+        }
+      } catch {
+        setCompassPermission('denied');
+      }
+    } else if (window.DeviceOrientationEvent) {
+      setCompassSupported(true);
+      setCompassPermission('granted');
+    } else {
+      setCompassPermission('not-supported');
+    }
+  }, []);
 
   useEffect(() => {
     const handleOrientation = (event) => {
