@@ -44,7 +44,7 @@ const BottomNav = ({ activeScreen, onNavigate }) => {
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
-                className={`flex flex-col items-center justify-center px-6 py-2 rounded-2xl transition-all duration-300 min-w-[80px] ${
+                className={`flex flex-col items-center justify-center px-6 py-2 rounded-2xl transition-all duration-300 min-w-20 ${
                   isActive
                     ? 'text-sky-400 bg-sky-400/10'
                     : 'text-slate-500 hover:text-slate-300 hover:bg-white/5'
