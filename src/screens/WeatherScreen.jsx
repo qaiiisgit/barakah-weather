@@ -35,8 +35,8 @@ const SunriseSunset = ({ sunrise, sunset }) => {
     //   );
 
     return (
-        <div className='glass-card rounded-3xl'>
-            <h3 className='text-slate-400 text-xs'>Sun</h3>
+        <div className='glass-card rounded-3xl p-5 animate-slide-up'>
+            <h3 className='text-slate-400 text-xs uppercase tracking-widest mb-4'>Sun</h3>
             <div className='flex justify-around'>
                 <div className='text-center'>
                     <div className="text-3xl mb-2">🌅</div>
