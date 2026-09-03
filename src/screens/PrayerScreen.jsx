@@ -3,6 +3,27 @@ import { usePrayerTimes } from '../hooks/usePrayerTimes';
 import ErrorCard from '../components/ErrorCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 
+const CountdownTimer = ({ countdown, nextPrayer }) => {
+  if (!countdown || !nextPrayer) return null;
+
+  return (
+    <div className="glass-card rounded-3xl p-6 bg-linear-to-br from-emerald-900/30
+      via-teal-900/20 to-slate-900/30 border border-emerald-500/20 animate-fade-in">
+      <div className="text-center">
+        <p className="text-emerald-400 text-xs uppercase tracking-widest font-medium mb-2">
+          Next Prayer
+        </p>
+        <div className="flex items-center justify-center gap-1 mb-1">
+          <span className="text-2xl">{nextPrayer.icon}</span>
+          <p className="text-white text-2xl font-bold ml-2">{nextPrayer.key}</p>
+        </div>
+        <p className="text-slate-400 font-arabic text-sm mb-5">{nextPrayer.arabic}</p>
+
+      </div>
+    </div>
+  );
+};
+
 const PrayerScreen = ({ location, locationName }) => {
     const [method, setMethod] = useState(2);
     const [showMethodPicker, setShowMethodPicker] = useState(false);
