@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { usePrayerTimes } from '../hooks/usePrayerTimes';
 import ErrorCard from '../components/ErrorCard';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 const PrayerScreen = ({ location, locationName }) => {
     const [method, setMethod] = useState(2);
@@ -51,6 +52,53 @@ const PrayerScreen = ({ location, locationName }) => {
                     </svg>
                 </button>
             </div>
+
+
+            {/* Method Picker */}
+            {
+                showMethodPicker && (
+                    <div className='glass-card rounded-2xl p-4 border border-white/10 animate-slide-up'>
+                        <p className='text-slate-400 text-xs uppercase tracking-wide mb-3'> Calculation Method </p>
+                        <div className='space-y-1 max-h-48 overflow-auto'>
+                            {CALCULATIONS_METHODS.map((m) => (
+                                <button key={m.id}
+                                    onClick={() => { setMethod(m.id); setShowMethodPicker(false); }}
+                                    className={`w-full text-left px-3 py-2.5 rounded-xl text-sm transition-all ${method === m.id
+                                        ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                                        : 'text-slate-300 hover:bg-white/5'
+                                        }`}
+                                >
+                                    {m.name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+            {loading && <LoadingSpinner message='Calculating prayer times...' />}
+            {error && !loading && (
+                <ErrorCard message={error} onRetry={refresh} type='error' />
+            )}
+
+            {prayerData && !loading && (
+                <>
+                    <CountdownTimer countdown={countdown} nextPrayer={nextPrayer} />
+                    <PrayerCard timings={prayerData.timings}
+                        nextPrayer={nextPrayer}
+                        date={dateInfo} />
+
+                    {/* Islamic Quote */}
+                    <div className="glass-card rounded-2xl p-5 text-center border border-white/5">
+                        <p className="text-slate-400 text-xs font-arabic leading-relaxed mb-2">
+                            "إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَّوْقُوتًا"
+                        </p>
+                        <p className="text-slate-500 text-xs">
+                            "Indeed, prayer has been decreed upon the believers a decree of specified times."
+                        </p>
+                        <p className="text-slate-600 text-xs mt-1">— Quran 4:103</p>
+                    </div>
+                </>
+            )}
         </div>
     )
 }
