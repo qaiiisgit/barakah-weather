@@ -19,6 +19,30 @@ const CountdownTimer = ({ countdown, nextPrayer }) => {
         </div>
         <p className="text-slate-400 font-arabic text-sm mb-5">{nextPrayer.arabic}</p>
 
+        {/* Countdown digits */}
+        <div className="flex items-center justify-center gap-3">
+          {[
+            { value: countdown.hours, label: 'Hours' },
+            { value: countdown.minutes, label: 'Min' },
+            { value: countdown.seconds, label: 'Sec' },
+          ].map((item, i) => (
+            <React.Fragment key={item.label}>
+              <div className="flex flex-col items-center">
+                <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl
+                  w-16 h-16 flex items-center justify-center mb-1.5">
+                  <span className="text-emerald-300 text-2xl font-bold tabular-nums
+                    font-mono leading-none">
+                    {item.value}
+                  </span>
+                </div>
+                <span className="text-slate-500 text-xs">{item.label}</span>
+              </div>
+              {i < 2 && (
+                <span className="text-emerald-500 text-xl font-bold pb-6 animate-pulse">:</span>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );
