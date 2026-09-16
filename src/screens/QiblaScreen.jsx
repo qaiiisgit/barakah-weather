@@ -25,6 +25,23 @@ const QiblaScreen = ({ location, locationName }) => {
         );
     }
 
+    return(
+        <div className="px-4 pt-2 pb-24 space-y-4">
+            {/*Header*/}
+            <div className="pt-2">
+                <h1 className="text-white text-xl font-bold">Qibla Direction</h1>
+                <p className="text-slate-500 text-xs mt-0.5">{locationName}</p>
+            </div>
+
+            {loading && <LoadingSpinner message="Calculating Qibla direction..."/>}
+
+            {error && !loading && (
+                <ErrorCard message={error} onRetry={refresh} type="error"/>
+            )}
+            
+        </div>
+    )
+
 }
 
 export default QiblaScreen;
