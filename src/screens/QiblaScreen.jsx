@@ -74,6 +74,24 @@ const QiblaScreen = ({ location, locationName }) => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Compass */}
+                    <div>
+                        <CompassArrow
+                            rotation={arrowRotation !== null ? arrowRotation : qiblaDirection}
+                            qiblaDirection={qiblaDirection}
+                            compassHeading={compassHeading}
+                        />
+
+                        <div className="mt-6 text-center">
+                            <p className="text-slate-400 text-xs">
+                                🕋 <span className="text-amber-400 font-medium">Kaaba</span>, Makkah Al-Mukarramah
+                            </p>
+                            <p className="text-slate-600 text-xs mt-1">
+                                {Math.round(qiblaDirection)}° from North
+                            </p>
+                        </div>
+                    </div>
                 </>
             )}
 
