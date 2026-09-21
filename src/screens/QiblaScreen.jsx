@@ -92,6 +92,37 @@ const QiblaScreen = ({ location, locationName }) => {
                             </p>
                         </div>
                     </div>
+
+                    {/* Compass permission */}
+          {!compassSupported && (
+            <div className="glass-card rounded-2xl p-5 border border-amber-500/20
+              bg-amber-500/5 animate-fade-in">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🧭</span>
+                <div className="flex-1">
+                  <p className="text-amber-400 font-medium text-sm mb-1">
+                    {compassPermission === 'not-supported'
+                      ? 'Compass Not Available'
+                      : 'Enable Device Compass'}
+                  </p>
+                  <p className="text-slate-400 text-xs leading-relaxed mb-3">
+                    {compassPermission === 'not-supported'
+                      ? 'Your device does not support compass. The arrow shows the Qibla bearing from North.'
+                      : 'Allow motion & orientation access to use your device compass for accurate Qibla direction.'}
+                  </p>
+                  {compassPermission !== 'not-supported' && compassPermission !== 'denied' && (
+                    <button
+                      onClick={requestCompassPermission}
+                      className="px-4 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400
+                        rounded-xl text-sm font-medium border border-amber-500/30 transition-all"
+                    >
+                      Enable Compass
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
                 </>
             )}
 
