@@ -138,6 +138,17 @@ const QiblaScreen = ({ location, locationName }) => {
                             Move away from metal objects and electronics.
                         </p>
                     </div>
+
+                    {/* Islamic Quote */}
+                    <div className="glass-card rounded-2xl p-5 text-center border border-white/5 mb-4">
+                        <p className="text-slate-400 text-xs font-arabic leading-loose mb-2">
+                            "وَمِنْ حَيْثُ خَرَجْتَ فَوَلِّ وَجْهَكَ شَطْرَ الْمَسْجِدِ الْحَرَامِ"
+                        </p>
+                        <p className="text-slate-500 text-xs">
+                            "And from wherever you go out, turn your face toward al-Masjid al-Haram."
+                        </p>
+                        <p className="text-slate-600 text-xs mt-1">— Quran 2:149</p>
+                    </div>
                 </>
             )}
 
