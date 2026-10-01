@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useWeather } from '../hooks/useWeather';
-// import WeatherCard from '../components/WeatherCard';
-// import ForecastCard from '../components/ForecastCard';
+import WeatherCard from '../components/WeatherCard';
+import ForecastCard from '../components/ForecastCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorCard from '../components/ErrorCard';
 import CitySearch from '../components/CitySearch';
