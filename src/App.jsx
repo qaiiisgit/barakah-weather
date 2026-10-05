@@ -65,18 +65,18 @@ const App = () => {
       )}
 
       {/* Main content */}
-      <main className="overflow-y-auto pb-20"
+      {/* <main className="overflow-y-auto pb-20"
         style={{ minHeight: '100vh' }}>
         <div className="animate-fade-in">
           {renderScreen()}
         </div>
-      </main>
+      </main> */}
 
       {/* Bottom Navigation */}
-      <BottomNav
+      {/* <BottomNav
         activeScreen={activeScreen}
         onNavigate={setActiveScreen}
-      />
+      /> */}
     </div>
   );
 };
