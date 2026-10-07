@@ -73,10 +73,10 @@ const App = () => {
       </main>
 
       {/* Bottom Navigation */}
-      {/* <BottomNav
+      <BottomNav
         activeScreen={activeScreen}
         onNavigate={setActiveScreen}
-      /> */}
+      />
     </div>
   );
 };
