@@ -1,11 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barakah Weather</title>
+  </head>
+  <body>
+    <!-- 1. The container element React mounts into -->
+    <div id="root"></div>
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <!-- 2. The script tag that loads your React entry point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
