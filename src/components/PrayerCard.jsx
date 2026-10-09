@@ -1,4 +1,5 @@
 import React from 'react'
+import { formatPrayerTime, PRAYER_NAMES } from '../services/prayerService';
 
 const PrayerCard = ({timings, nextPrayer, date}) => {
   return (
