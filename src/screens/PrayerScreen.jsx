@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { usePrayerTimes } from '../hooks/usePrayerTimes';
 import ErrorCard from '../components/ErrorCard';
 import LoadingSpinner from '../components/LoadingSpinner';
+import { CALCULATION_METHODS } from '../services/prayerService';
+import PrayerCard from '../components/PrayerCard';
 
 const CountdownTimer = ({ countdown, nextPrayer }) => {
   if (!countdown || !nextPrayer) return null;
@@ -105,7 +107,7 @@ const PrayerScreen = ({ location, locationName }) => {
                     <div className='glass-card rounded-2xl p-4 border border-white/10 animate-slide-up'>
                         <p className='text-slate-400 text-xs uppercase tracking-wide mb-3'> Calculation Method </p>
                         <div className='space-y-1 max-h-48 overflow-auto'>
-                            {CALCULATIONS_METHODS.map((m) => (
+                            {CALCULATION_METHODS.map((m) => (
                                 <button key={m.id}
                                     onClick={() => { setMethod(m.id); setShowMethodPicker(false); }}
                                     className={`w-full text-left px-3 py-2.5 rounded-xl text-sm transition-all ${method === m.id
