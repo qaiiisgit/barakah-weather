@@ -1,8 +1,9 @@
-import React from "react";
-import { useQibla } from '../hooks/useQibla'
-import ErrorCard from "../components/ErrorCard";
-
-
+import React from 'react';
+import { useQibla } from '../hooks/useQibla';
+import CompassArrow from '../components/CompassArrow';
+import LoadingSpinner from '../components/LoadingSpinner';
+import ErrorCard from '../components/ErrorCard';
+import { getCompassLabel } from '../services/qiblaService';
 
 const QiblaScreen = ({ location, locationName }) => {
     const {
