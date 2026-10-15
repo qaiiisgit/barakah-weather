@@ -35,11 +35,11 @@ const SunriseSunset = ({ sunrise, sunset }) => {
     //   );
 
     return (
-        <div className='glass-card rounded-3xl p-5 animate-slide-up'>
-            <h3 className='text-slate-400 text-xs uppercase tracking-widest mb-4'>Sun</h3>
+        <div className='glass-card rounded-xl p-5 animate-slide-up'>
+            <h3 className='text-slate-400 text-sm uppercase tracking-widest mb-4'>Sun</h3>
             <div className='flex justify-around'>
                 <div className='text-center'>
-                    <div className="text-3xl mb-2">🌅</div>
+                    <div className="text-xl mb-2">🌅</div>
                     <p className='text-white font-semibold'>{format(sunrise)}</p>
                     <p className='text-slate-500 text-xs mt-1'>Sunrise</p>
                 </div>
