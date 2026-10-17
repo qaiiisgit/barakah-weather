@@ -41,7 +41,7 @@ const SunriseSunset = ({ sunrise, sunset }) => {
                 <div className='text-center'>
                     <div className="text-xl mb-2">🌅</div>
                     <p className='text-white font-bold'>{format(sunrise)}</p>
-                    <p className='text-slate-500 text-xs mt-1'>Sunrise</p>
+                    <p className='text-slate-500 text-2xl mt-1'>Sunrise</p>
                 </div>
                 <div className='flex items-center'>
                     <div className='h-0.5 w-20 bg-linear-to-r from-orange-400 to-sky-400 rounded-full' />
@@ -49,7 +49,7 @@ const SunriseSunset = ({ sunrise, sunset }) => {
                 <div className="text-center">
                     <div className="text-4xl mb-2">🌇</div>
                     <p className="text-white font-semibold">{format(sunset)}</p>
-                    <p className='text-slate-500 text-xs mt-1'>Sunset</p>
+                    <p className='text-slate-500 text-sm mt-1'>Sunset</p>
                 </div>
             </div>
         </div>
