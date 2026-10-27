@@ -44,7 +44,7 @@ const SunriseSunset = ({ sunrise, sunset }) => {
                     <p className='text-slate-500 text-2xl mt-1'>Sunrise</p>
                 </div>
                 <div className='flex items-center'>
-                    <div className='h-0.5 w-20 bg-linear-to-r from-orange-400 to-sky-400 rounded-full' />
+                    <div className='h-1.5 w-16 bg-linear-to-r from-orange-400 to-sky-400 rounded-full' />
                 </div>
                 <div className="text-center">
                     <div className="text-2xl mb-2">🌇</div>
