@@ -104,8 +104,8 @@ const PrayerScreen = ({ location, locationName }) => {
             {/* Method Picker */}
             {
                 showMethodPicker && (
-                    <div className='glass-card rounded-2xl p-4 border border-white/10 animate-slide-up'>
-                        <p className='text-slate-400 text-xs uppercase tracking-wide mb-3'> Calculation Method </p>
+                    <div className='glass-card rounded-lg p-2 border border-white/10 animate-slide-up'>
+                        <p className='text-slate-100 text-sm uppercase tracking-wide mb-2'> Calculation Method </p>
                         <div className='space-y-1 max-h-48 overflow-auto'>
                             {CALCULATION_METHODS.map((m) => (
                                 <button key={m.id}
