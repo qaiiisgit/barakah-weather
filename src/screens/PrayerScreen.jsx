@@ -111,8 +111,8 @@ const PrayerScreen = ({ location, locationName }) => {
                                 <button key={m.id}
                                     onClick={() => { setMethod(m.id); setShowMethodPicker(false); }}
                                     className={`w-full text-left px-2 py-2.5 rounded-lg text-sm transition-all ${method === m.id
-                                        ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                                        : 'text-slate-300 hover:bg-white/5'
+                                        ? 'bg-emerald-200/10 text-emerald-100 border border-emerald-500/30'
+                                        : 'text-slate-500 hover:bg-white/5'
                                         }`}
                                 >
                                     {m.name}
