@@ -104,15 +104,15 @@ const PrayerScreen = ({ location, locationName }) => {
             {/* Method Picker */}
             {
                 showMethodPicker && (
-                    <div className='glass-card rounded-lg p-2 border border-white/10 animate-slide-up'>
-                        <p className='text-slate-100 text-sm uppercase tracking-wide mb-2'> Calculation Method </p>
-                        <div className='space-y-3 max-h-50 overflow-auto'>
+                    <div className='glass-card rounded-2xl p-4 border border-white/10 animate-slide-up'>
+                        <p className='text-slate-400 text-xs uppercase tracking-wide mb-3'> Calculation Method </p>
+                        <div className='space-y-1 max-h-48 overflow-auto'>
                             {CALCULATION_METHODS.map((m) => (
                                 <button key={m.id}
                                     onClick={() => { setMethod(m.id); setShowMethodPicker(false); }}
-                                    className={`w-full text-left px-2 py-2.5 rounded-lg text-sm transition-all ${method === m.id
-                                        ? 'bg-emerald-200/10 text-emerald-100 border border-emerald-500/30'
-                                        : 'text-slate-500 hover:bg-white/5'
+                                    className={`w-full text-left px-3 py-2.5 rounded-xl text-sm transition-all ${method === m.id
+                                        ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                                        : 'text-slate-300 hover:bg-white/5'
                                         }`}
                                 >
                                     {m.name}
