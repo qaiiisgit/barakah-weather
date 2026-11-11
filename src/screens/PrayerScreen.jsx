@@ -72,10 +72,10 @@ const PrayerScreen = ({ location, locationName }) => {
     return (
         <div className='px-4 pt-2 pb-24 space-y-4'>
             {/* Header */}
-            <div className='flex items-center justify-between pt-2'>
+            <div className='flex items-center justify-between pt-4'>
                 <div>
-                    <h1 className='text-white text-xl font-bold'>Prayer Times</h1>
-                    <p className='text-slate-500 text-xs mt-0.5 truncate max-w-45'>{locationName}</p>
+                    <h1 className='text-white text-lg font-semibold'>Prayer Times</h1>
+                    <p className='text-slate-200 text-sm mt-0.8 truncate max-w-45'>{locationName}</p>
                 </div>
                 <div className="flex gap-2"></div>
                 <button
