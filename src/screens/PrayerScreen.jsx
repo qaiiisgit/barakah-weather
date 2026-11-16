@@ -90,8 +90,8 @@ const PrayerScreen = ({ location, locationName }) => {
                 </button>
                 <button
                     onClick={refresh}
-                    className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 flex items-center
-              justify-center text-slate-400 hover:text-white transition-all"
+                    className="w-7 h-7 rounded-lg bg-slate-500 hover:bg-slate-400 flex items-center
+              justify-center text-slate-800 hover:text-white transition-all"
                 >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
