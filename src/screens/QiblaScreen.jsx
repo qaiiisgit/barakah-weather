@@ -30,8 +30,8 @@ const QiblaScreen = ({ location, locationName }) => {
         <div className="px-4 pt-2 pb-24 space-y-4">
             {/*Header*/}
             <div className="pt-2">
-                <h1 className="text-white text-xl font-bold">Qibla Direction</h1>
-                <p className="text-slate-500 text-xs mt-0.5">{locationName}</p>
+                <h1 className="text-white text-lg font-semibold">Qibla Direction</h1>
+                <p className="text-slate-700 text-sm mt-1">{locationName}</p>
             </div>
 
             {loading && <LoadingSpinner message="Calculating Qibla direction..." />}
