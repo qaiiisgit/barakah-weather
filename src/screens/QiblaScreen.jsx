@@ -48,10 +48,10 @@ const QiblaScreen = ({ location, locationName }) => {
                         <div className="flex justify-around text-center">
                             <div>
                                 <p className="text-slate-200 text-sm uppercase tracking-wide mb-3">Qibla</p>
-                                <p className="text-sky-400 text-2xl font-bold">
+                                <p className="text-sky-200 text-lg font-semibold">
                                     {Math.round(qiblaDirection)}°
                                 </p>
-                                <p className="text-slate-500 text-xs mt-0.5">
+                                <p className="text-slate-300 text-sm mt-1.5">
                                     {getCompassLabel(qiblaDirection)}
                                 </p>
                             </div>
