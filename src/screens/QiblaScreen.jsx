@@ -57,8 +57,8 @@ const QiblaScreen = ({ location, locationName }) => {
                             </div>
                             <div className="w-px bg-white/10" />
                             <div>
-                                <p className="text-slate-400 text-xs uppercase tracking-wide mb-1">Compass</p>
-                                <p className="text-slate-200 text-2xl font-bold">
+                                <p className="text-slate-200 text-sm uppercase tracking-wide mb-2">Compass</p>
+                                <p className="text-slate-400 text-xl font-semibold">
                                     {compassSupported ? `${Math.round(compassHeading)}°` : '--°'}
                                 </p>
                                 <p className="text-slate-500 text-xs mt-0.5">
